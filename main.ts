@@ -5,6 +5,14 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
         모터_구동_중 = true
     }
     basic.pause(500)
+    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.JumpUp), music.PlaybackMode.InBackground)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 })
 input.onSound(DetectedSound.Loud, function () {
     input.setSoundThreshold(SoundThreshold.Loud, 230)
@@ -14,6 +22,14 @@ input.onSound(DetectedSound.Loud, function () {
         모터_구동_중 = true
     }
     basic.pause(500)
+    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.JumpUp), music.PlaybackMode.InBackground)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 })
 input.onGesture(Gesture.ScreenDown, function () {
     basic.clearScreen()
